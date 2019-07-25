@@ -1,0 +1,8 @@
+<h1>Tutorial Component</h1>
+<h2>This is nguyen thanh nhan Component</h2>
+    <h3 [class.redColor]="applyClass"> Apply Class </h3>
+    <p>Child Components: {{ name }}</p>
+
+    <Button [disabled]="voted" (click)="vote(true)">Agree</Button>
+    <Button [disabled]="voted" (click)="vote(false)">DisAgree</Button>
+    Result: {{ voted }}
