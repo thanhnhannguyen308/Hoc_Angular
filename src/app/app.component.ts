@@ -10,7 +10,17 @@ import { from } from 'rxjs';
 export class AppComponent {
   title = 'demo2';
   image = 'https://picsum.photos/200/300?grayscale';
+  showLineIf = true;
+  color = 'red';
+  cone = true;
+  ctwo = true;
+  public colors: string[] = ['red', 'green', 'blue'];
+  style = 'italic';
+  size = '30px';
   OnClick(value) {
     console.log(value);
+    this.showLineIf = false;
+    this.cone = !this.cone;
+    this.ctwo = !this.ctwo;
   }
 }

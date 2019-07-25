@@ -1,1 +1,8 @@
+git add *
+git commit -m 'ghi chu'
+git push origin 'branch'
 
+
+
+[(ngModel)] // Su dung two way binding vd input thay doi thi tren view cung thay doi theo
+ngIf

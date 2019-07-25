@@ -28,4 +28,25 @@
 <input type="text" [(ngModel)] = "lastName" />
 <br />
 Fullname: {{firtsName}} - {{lastName}}
+
+<!-- Su dung ngIf  -->
+<h3 *ngIf="showLineIf">this ngIf directives</h3>
+
+<!-- Su dung ngSwitch -->
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'">This is red</p>
+  <p *ngSwitchCase="'blue'">This is blue</p>
+  <p *ngSwitchCase="'sky'">This is sky</p>
+  <p *ngSwitchDefault>This is default</p>
+</div>
+
+<!-- Su dung ngFor -->
+<ul>
+  <li *ngFor="let color of colors">{{ color }}</li>
+</ul>
+
+<!-- Su dung ngClass -->
+<p [ngClass]="{classOne:cone,classTwo:ctwo}">Toi ten la nguyen thanh nhan</p>
+<p [ngStyle]="{'font-style': style, 'font-size':size}">la sinh vien nam 4</p>
+
 <router-outlet></router-outlet>
