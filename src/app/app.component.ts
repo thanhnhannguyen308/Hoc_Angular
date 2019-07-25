@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TutorialComponent } from './tutorial.component';
 import { from } from 'rxjs';
 
 @Component({
@@ -17,6 +18,20 @@ export class AppComponent {
   public colors: string[] = ['red', 'green', 'blue'];
   style = 'italic';
   size = '30px';
+  agree = 0;
+  disagree = 0;
+
+  // @ViewChild(TutorialComponent)
+  // private tutorialComponent: TutorialComponent;
+
+  parentVote(argee: boolean) {
+    if (argee) {
+      this.agree++;
+    } else {
+      this.disagree++;
+    }
+  }
+
   OnClick(value) {
     console.log(value);
     this.showLineIf = false;

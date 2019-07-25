@@ -6,3 +6,5 @@ git push origin 'branch'
 
 [(ngModel)] // Su dung two way binding vd input thay doi thi tren view cung thay doi theo
 ngIf
+
+@Input laf truyen du lieu tu cha sang con

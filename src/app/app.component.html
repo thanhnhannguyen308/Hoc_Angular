@@ -22,12 +22,16 @@
 
 <img [src]="image" />
 
-<my-tutorial></my-tutorial>
+
+<input type="text" #textName (keyup)="0"/>
+<my-tutorial [name]="textName.value" (onVote)="parentVote($event)"></my-tutorial>
+<p>agree: {{agree}} - digagree: {{ disagree }}</p>
+
 
 <input type="text" [(ngModel)] = "firtsName" />
 <input type="text" [(ngModel)] = "lastName" />
 <br />
-Fullname: {{firtsName}} - {{lastName}}
+Fullname: {{ firtsName | lowercase }} - {{ lastName | uppercase }}
 
 <!-- Su dung ngIf  -->
 <h3 *ngIf="showLineIf">this ngIf directives</h3>
