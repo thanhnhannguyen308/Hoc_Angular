@@ -18,7 +18,14 @@
   </li>
 </ul>
 
+<button (click)="OnClick($event)">Click me</button>
+
 <img [src]="image" />
 
 <my-tutorial></my-tutorial>
+
+<input type="text" [(ngModel)] = "firtsName" />
+<input type="text" [(ngModel)] = "lastName" />
+<br />
+Fullname: {{firtsName}} - {{lastName}}
 <router-outlet></router-outlet>
