@@ -1,4 +1,4 @@
-git add *
+git add *n
 git commit -m 'ghi chu'
 git push origin 'branch'
 

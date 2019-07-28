@@ -6,8 +6,11 @@ import { from } from 'rxjs';
   selector: 'form-view',
   templateUrl: './form.component.html',
   // template: 'Hello angular 2',
-   styles: ['h1 { color: red;};']
+  styles: ['h1 { color: red;};']
 })
 export class FormComponent {
   title = 'demo2';
+  onSubmit(value: any) {
+    console.log(value);
+  }
 }
