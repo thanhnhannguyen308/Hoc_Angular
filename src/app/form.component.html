@@ -1,8 +1,18 @@
 <h1>Day la component cua form</h1>
 
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-
   <div class="form-group">
+    <div class="form-group">
+      <label for="exampleInputEmail3">address</label>
+      <input type="text" class="form-control" name="name" required #name="ngModel" id="exampleInputEmail3" aria-describedby="name help"
+        placeholder="Enter name" ngModel>
+      <div *ngIf="name.errors && (name.dirty || name.touched)" class="label label-danger">
+        <div [hidden]="!name.errors.required">
+          Name is required
+        </div>
+      </div>
+      <small id="NameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"
       placeholder="Enter email" ngModel>
