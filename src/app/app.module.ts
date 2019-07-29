@@ -6,20 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TutorialComponent } from './tutorial.component';
 import { FormComponent } from './form.component';
+import { EmployeeListComponent } from './employee.component'
+
+import { EmployeeService } from './services/employee.service';
 import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     TutorialComponent,
-    FormComponent
+    FormComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
+    
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
